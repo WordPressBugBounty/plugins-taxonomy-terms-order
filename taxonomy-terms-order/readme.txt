@@ -4,7 +4,7 @@ Donate link: http://www.nsp-code.com/donate.php
 Tags: category order,terms order, taxonomy order, categories sort
 Requires at least: 2.8
 Tested up to: 7.0
-Stable tag: 1.9.9
+Stable tag: 1.9.9.1
 
 Drag-and-drop ordering for Categories & any taxonomy (hierarchically) using a Drag and Drop Sortable JavaScript capability.
 
@@ -76,8 +76,11 @@ Consider upgrading to our advanced version of this plugin at a very resonable pr
 
 == Change Log ==
 
+= 1.9.9.1 =
+ - Fix: Wrong comparison operator for numeric / string. 
+
 = 1.9.9 =
- - Fix: ncaught Error: Call to undefined function is_plugin_active() 
+ - Fix: Uncaught Error: Call to undefined function is_plugin_active() 
 
 = 1.9.8 =
  - XStore Core - compatibility file, add a Term Order option for the orderby argument, on the Brands widget. 

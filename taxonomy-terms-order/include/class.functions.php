@@ -21,6 +21,13 @@
                                         );
                     $settings          = wp_parse_args( $settings, $defaults );
                     
+                    // Cast all scalar values to string, leave other types (array, object, null) untouched
+                    foreach ( $settings as $key => $value ) 
+                        {
+                            if ( is_scalar( $value ) )
+                                $settings[ $key ] = (string) $value;
+                        }
+                    
                     return $settings;   
                     
                 }

@@ -134,7 +134,7 @@
                             if (isset($_GET['orderby']) && sanitize_text_field( wp_unslash( $_GET['orderby'] ) ) !==  'term_order')
                                 return $clauses;
                             
-                            if ($options['adminsort'] === intval("1") && $ignore_term_order !== true)
+                            if ($options['adminsort'] === "1" && $ignore_term_order !== true)
                                 {
                                     if ( $clauses['orderby']    ==  'ORDER BY t.name' )
                                         $clauses['orderby'] =   'ORDER BY t.term_order '. $clauses['order'] .', t.name';
@@ -147,7 +147,7 @@
                         }
                     
                     //if autosort, then force the menu_order
-                    if ($options['autosort'] === intval ( "1" ) && $ignore_term_order !== true ) 
+                    if ($options['autosort'] === "1" && $ignore_term_order !== true ) 
                         {
                             $clauses['orderby'] =   'ORDER BY t.term_order';
                             
